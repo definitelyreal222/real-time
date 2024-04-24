@@ -1,0 +1,6 @@
+- 100% of tokens in liquidity pool
+- 100% of initial liquidity tokens burned
+- Minimum price 0.00005 SOL
+- Unruggable memecoin
+- Token address: TBD
+- Pool address: TBD
