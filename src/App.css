@@ -104,3 +104,37 @@ h1 {
         align-items: center;
     }
 }
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(12px, 3vw, 28px); /* Adjust font size dynamically */
+}
+
+.t-list {
+    list-style: none;
+    padding-left: 0; /* Remove default padding */
+    text-align: left;
+}
+
+.t-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.bullet {
+    margin-right: 10px;
+    width: 20px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.t-text {
+    color: white;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .list-container {
+    }
+}

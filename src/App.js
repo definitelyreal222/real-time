@@ -20,11 +20,12 @@ import ghicon from "./img/gh.icon.svg";
 import solicon from "./img/sol.icon.png";
 import vidya from "./video/dp.mp4";
 import footer from "./img/footer.png";
-// import bar from "./img/bar.png";
+import bar from "./img/bar.png";
 import bullet from "./img/icon.png"
 import sidebar from "./img/sidebar.png"
 import guideButton from "./img/guidebutton.png"
 import buyguide from "./img/guide.png"
+import tokenomics from "./img/tokenomics.png"
 import {useState} from "react";
 
 const memes = [meme1, meme2, meme3, meme4, meme5, meme6, meme7, meme8, meme9];
@@ -79,16 +80,18 @@ function Tokenomics() {
   ];
 
   return (
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <img src={sidebar} alt="Decorative" style={{ marginRight: '20px', float: 'left' }} />
-        <ul style={{ listStyleType: 'none', paddingLeft: 0, paddingTop: '164px' }}>
-          {items.map((item, index) => (
-              <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '40px' }}>
-                <img src={bullet} alt="Bullet" style={{ marginRight: '10px', width:"3%" }} />
-                <div style={{ color: 'white', fontSize: '32px', fontFamily: 'Arial Black, Arial, sans-serif'}}> {item} </div>
-              </li>
-          ))}
-        </ul>
+      <div>
+          <img src={tokenomics} style={{width: '50%', paddingTop: '40px', paddingBottom: '40px'}} />
+          <div className="list-container">
+              <ul className={"t-list"} >
+                  {items.map((item, index) => (
+                      <li key={index} >
+                          <img className={"bullet"} src={bullet} alt="Bullet"  />
+                          <div className={"t-text"}> {item} </div>
+                      </li>
+                  ))}
+              </ul>
+          </div>
       </div>
   );
 }
