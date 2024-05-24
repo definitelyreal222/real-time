@@ -1,43 +1,71 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import buy from "./img/buy.png";
+import buy from "./img/buynow.png";
 import icon from "./img/icon.png";
 import roadmap from "./img/roadmap.png";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
-import meme1 from "./img/meme01.png";
-import meme2 from "./img/meme02.png";
-import meme3 from "./img/meme03.png";
-import meme4 from "./img/meme04.png";
-import meme5 from "./img/meme05.png";
-import meme6 from "./img/meme06.png";
-import meme7 from "./img/meme07.png";
-import meme8 from "./img/meme08.png";
-import meme9 from "./img/meme09.png";
 import xicon from "./img/x.icon.svg";
 import tgicon from "./img/tg.icon.png";
 import jupicon from "./img/jup.icon.svg";
 import ghicon from "./img/gh.icon.svg";
 import solicon from "./img/sol.icon.png";
 import discord from "./img/dc.icon.png";
-import vidya from "./video/dp.mp4";
 import footer from "./img/footer.png";
 import bar from "./img/bar.png";
 import bullet from "./img/icon.png";
 import sidebar from "./img/sidebar.png";
-import guideButton from "./img/guidebutton.png";
+import guideButton from "./img/howbuy.png";
 import buyguide from "./img/guide.png";
 import tokenomics from "./img/tokenomics.png";
 import { useState } from "react";
+import Iframe from "react-iframe";
 
-const memes = [meme1, meme2, meme3, meme4, meme5, meme6, meme7, meme8, meme9];
-
-function BuyVideo() {
-  return (
-    <video width={"70%"} controls>
-      <source src={vidya} type="video/mp4" />
-    </video>
-  );
-}
+const videos = [
+  {
+    title: "Butt-Plug In Your Ears",
+    id: "949767112",
+  },
+  {
+    title: "What Is A Memecoin",
+    id: "949772170",
+  },
+  {
+    title: "It's A Death Cult",
+    id: "949771053",
+  },
+  {
+    title: "Dumb Money",
+    id: "949769170",
+  },
+  {
+    title: "Old Money New Money",
+    id: "949770695",
+  },
+  {
+    title: "Unruggable Tokenomics",
+    id: "949772679",
+  },
+  {
+    title: "Absurd Allegations",
+    id: "949767985",
+  },
+  {
+    title: "Losers and Degenerates",
+    id: "949771789",
+  },
+  {
+    title: "Open Source For The Win",
+    id: "949770287",
+  },
+  {
+    title: "Let Daddy Manage This",
+    id: "949769610",
+  },
+  {
+    title: "Information Wants To Be Free",
+    id: "949764461",
+  },
+];
 
 const buyUrl =
   "https://jup.ag/swap/SOL-9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6";
@@ -69,7 +97,7 @@ function BuyersGuide() {
         src={guideButton}
         className="img-fluid"
         onClick={openModal}
-        width={"72%"}
+        // width={"72%"}
       />
       <PopoverModal isOpen={isModalOpen} onClose={closeModal}>
         <img src={buyguide} className="img-fluid" width={"100%"} />
@@ -81,7 +109,7 @@ function BuyersGuide() {
 function Tokenomics() {
   const items = [
     "Unruggable: 100% of initial liquidity locked",
-    "Minimum price 0.000000475 SOL",
+    "Minimum Marketcap: 475 SOL",
     "World's First Deep Fake Memecoin",
     <div>
       Token address:{" "}
@@ -198,9 +226,9 @@ function Navigation() {
           />
         </Navbar.Brand>
         <Nav className="me-auto">
+          <Nav.Link href="#videos">Videos</Nav.Link>
           <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
           <Nav.Link href="#roadmap">Roadmap</Nav.Link>
-          <Nav.Link href="#memepack">Meme Pack</Nav.Link>
           <Nav.Link href={buyUrl}>
             <a href={buyUrl} target="_blank" rel="noopener noreferrer">
               Buy Now
@@ -218,7 +246,42 @@ function App() {
       <Navigation />
       <Container className="mt-5" fluid>
         <Row id="buynow">
-          <BuyVideo />
+          <h1 className="banner">
+            <img src={icon} width={"200px"} /> DEADPOOL COIN{" "}
+          </h1>
+        </Row>
+        <Row id="videos">
+          {videos.map((video, i) => (
+            <Col sm={12} md={6} lg={4} key={i} className="mb-4">
+              <div className="video-container">
+                <h2>{video.title}</h2>
+                <div className="">
+                  <Iframe
+                    url={
+                      "https://player.vimeo.com/video/" +
+                      video.id +
+                      "?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    }
+                    width="100%"
+                    // height="100%"
+                    id={i}
+                    className=""
+                    display="block"
+                    position="relative"
+                    styles={
+                      {
+                        // border: "1px solid #ccc",
+                        // borderRadius: "5px",
+                        // boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
+        <Row id="buynow">
           <div className={"button-box"}>
             <BuyButton />
             <BuyersGuide />
@@ -231,14 +294,6 @@ function App() {
         </Row>
         <Row id="roadmap">
           <img src={roadmap} width={"100%"} />
-        </Row>
-        <Row id="memepack">
-          <h1>Meme Pack</h1>
-          {memes.map((img, i) => (
-            <Col sm={12} md={6} lg={4} key={i} className="mb-4">
-              <img src={img} className="img-fluid" />
-            </Col>
-          ))}
         </Row>
         <Row>
           <Col>
@@ -259,7 +314,7 @@ function App() {
               <img src={tgicon} width={"10%"} />
             </a>
             <a
-              href="https://discord.gg/UvCZyUg4"
+              href="https://discord.gg/vSfe2JY2"
               target="_blank"
               rel="noopener noreferrer"
               className="m-5"

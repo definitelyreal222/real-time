@@ -81,8 +81,8 @@ h1 {
     padding: 20px;
 }
 
-
-.action-button, .action-button a {
+.action-button,
+.action-button a {
     flex: 1; /* Makes the buttons share available space equally */
     display: flex; /* This ensures the flex properties apply to children */
     justify-content: center; /* Center content horizontally */
@@ -95,7 +95,6 @@ h1 {
 /*    width: 100%; !* Ensures images take full width of their containers *!*/
 /*    height: auto; !* Keeps image aspect ratio intact *!*/
 /*}*/
-
 
 /* Media query for screens smaller than 768px wide */
 @media (max-width: 768px) {
@@ -131,10 +130,32 @@ h1 {
 
 .t-text {
     color: white;
-    font-family: 'Arial Black', Arial, sans-serif;
+    font-family: "Arial Black", Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
     .list-container {
     }
+}
+
+.video-container {
+    font-size: clamp(6px, 1vw, 20px); /* Adjust font size dynamically */
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.iframe-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    font-size: clamp(6px, 100px, 400px); /* Adjust font size dynamically */
+    padding-bottom: 80px;
+    font-family: "Impact", Impact, Haettenschweiler, "Arial Narrow Bold",
+        sans-serif;
 }
