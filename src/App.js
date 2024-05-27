@@ -10,13 +10,13 @@ import jupicon from "./img/jup.icon.svg";
 import ghicon from "./img/gh.icon.svg";
 import solicon from "./img/sol.icon.png";
 import discord from "./img/dc.icon.png";
+import dextools from "./img/dt.icon.png";
 import footer from "./img/footer.png";
-import bar from "./img/bar.png";
 import bullet from "./img/icon.png";
-import sidebar from "./img/sidebar.png";
 import guideButton from "./img/howbuy.png";
 import buyguide from "./img/guide.png";
 import tokenomics from "./img/tokenomics.png";
+import header from "./img/header.png";
 import { useState } from "react";
 import Iframe from "react-iframe";
 
@@ -247,7 +247,8 @@ function App() {
       <Container className="mt-5" fluid>
         <Row id="buynow">
           <h1 className="banner">
-            <img src={icon} width={"200px"} /> DEADPOOL COIN{" "}
+            <img src={header} width={"100%"} />
+            {/* <img src={icon} width={"200px"} /> DEADPOOL COIN{" "} */}
           </h1>
         </Row>
         <Row id="videos">
@@ -314,7 +315,7 @@ function App() {
               <img src={tgicon} width={"10%"} />
             </a>
             <a
-              href="https://discord.gg/vSfe2JY2"
+              href="https://discord.gg/FdcxE6wYq6"
               target="_blank"
               rel="noopener noreferrer"
               className="m-5"
@@ -344,6 +345,14 @@ function App() {
               className="m-5"
             >
               <img src={solicon} width={"10%"} />
+            </a>
+            <a
+              href="https://www.dextools.io/app/en/solana/pair-explorer/4a9CgJE7vGeMGTBUP48B13tsec9azkZFHGFGYUv36wvZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-5"
+            >
+              <img src={dextools} width={"10%"} />
             </a>
           </Col>
         </Row>
