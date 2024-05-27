@@ -22,47 +22,47 @@ import Iframe from "react-iframe";
 
 const videos = [
   {
-    title: "Butt-Plug In Your Ears",
+    title: "BUTT-PLUG IN YOUR EARS",
     id: "949767112",
   },
   {
-    title: "What Is A Memecoin",
+    title: "WHAT IS A MEMECOIN",
     id: "949772170",
   },
   {
-    title: "It's A Death Cult",
+    title: "IT'S A DEATH CULT",
     id: "949771053",
   },
   {
-    title: "Dumb Money",
+    title: "DUMB MONEY",
     id: "949769170",
   },
   {
-    title: "Old Money New Money",
+    title: "OLD MONEY NEW MONEY",
     id: "949770695",
   },
   {
-    title: "Unruggable Tokenomics",
+    title: "UNRUGGABLE TOKENOMICS",
     id: "949772679",
   },
   {
-    title: "Absurd Allegations",
+    title: "ABSURD ALLEGATIONS",
     id: "949767985",
   },
   {
-    title: "Losers and Degenerates",
+    title: "LOSERS AND DEGENERATES",
     id: "949771789",
   },
   {
-    title: "Open Source For The Win",
+    title: "OPEN SOURCE FOR THE WIN",
     id: "949770287",
   },
   {
-    title: "Let Daddy Manage This",
+    title: "LET DADDY MANAGE THIS",
     id: "949769610",
   },
   {
-    title: "Information Wants To Be Free",
+    title: "INFORMATION WANTS TO BE FREE",
     id: "949764461",
   },
 ];
@@ -108,11 +108,11 @@ function BuyersGuide() {
 
 function Tokenomics() {
   const items = [
-    "Unruggable: 100% of initial liquidity locked",
-    "Minimum Marketcap: 475 SOL",
-    "World's First Deep Fake Memecoin",
+    "UNRUGGABLE: 100% OF INITIAL LIQUIDITY LOCKED",
+    "MINIMUM MARKETCAP: 475 SOL",
+    "WORLD'S FIRST DEEP FAKE MEMECOIN",
     <div>
-      Token address:{" "}
+      TOKEN ADDRESS:{" "}
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -122,7 +122,7 @@ function Tokenomics() {
       </a>
     </div>,
     <div>
-      Pool address:{" "}
+      POOL ADDRESS:{" "}
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -134,11 +134,17 @@ function Tokenomics() {
   ];
 
   return (
-    <div>
+    <div className={"tokenomics"}>
       <img
-        src={tokenomics}
-        style={{ width: "50%", paddingTop: "40px", paddingBottom: "40px" }}
+        src={icon}
+        style={{
+          width: "10%",
+          paddingTop: "40px",
+          paddingBottom: "40px",
+          paddingRight: "20px",
+        }}
       />
+      TOKENOMICS
       <div className="list-container">
         <ul className={"t-list"}>
           {items.map((item, index) => (
@@ -226,12 +232,12 @@ function Navigation() {
           />
         </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#videos">Videos</Nav.Link>
-          <Nav.Link href="#tokenomics">Tokenomics</Nav.Link>
-          <Nav.Link href="#roadmap">Roadmap</Nav.Link>
+          <Nav.Link href="#videos">VIDEOS</Nav.Link>
+          <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
+          <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
           <Nav.Link href={buyUrl}>
             <a href={buyUrl} target="_blank" rel="noopener noreferrer">
-              Buy Now
+              BUY NOW
             </a>
           </Nav.Link>
         </Nav>

@@ -1,5 +1,8 @@
 .App {
     text-align: center;
+    font-family: "Impact", Impact, Haettenschweiler, "Arial Narrow Bold",
+        sans-serif;
+    color: white;
 }
 
 .App-logo {
@@ -128,11 +131,6 @@ h1 {
     height: auto; /* Maintains aspect ratio */
 }
 
-.t-text {
-    color: white;
-    font-family: "Arial Black", Arial, sans-serif;
-}
-
 @media (max-width: 768px) {
     .list-container {
     }
@@ -153,9 +151,6 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.banner {
-    font-size: clamp(6px, 100px, 400px); /* Adjust font size dynamically */
-    padding-bottom: 80px;
-    font-family: "Impact", Impact, Haettenschweiler, "Arial Narrow Bold",
-        sans-serif;
+.tokenomics {
+    font-size: clamp(6px, 6vw, 80px); /* Adjust font size dynamically */
 }
