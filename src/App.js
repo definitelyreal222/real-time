@@ -12,6 +12,7 @@ import solicon from "./img/sol.icon.png";
 import discord from "./img/dc.icon.png";
 import dextools from "./img/dt.icon.png";
 import dexscreener from "./img/ds.icon.jpeg";
+import minds from "./img/minds.icon.png";
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
 import guideButton from "./img/howbuy.png";
@@ -368,6 +369,14 @@ function App() {
               className="m-5"
             >
               <img src={dexscreener} width={"10%"} />
+            </a>
+            <a
+              href="https://www.minds.com/deadpoolcoin/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-5"
+            >
+              <img src={minds} width={"10%"} />
             </a>
           </Col>
         </Row>
