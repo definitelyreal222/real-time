@@ -11,6 +11,7 @@ import ghicon from "./img/gh.icon.svg";
 import solicon from "./img/sol.icon.png";
 import discord from "./img/dc.icon.png";
 import dextools from "./img/dt.icon.png";
+import dexscreener from "./img/ds.icon.jpeg";
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
 import guideButton from "./img/howbuy.png";
@@ -359,6 +360,14 @@ function App() {
               className="m-5"
             >
               <img src={dextools} width={"10%"} />
+            </a>
+            <a
+              href="https://dexscreener.com/solana/4a9cgje7vgemgtbup48b13tsec9azkzfhgfgyuv36wvz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-5"
+            >
+              <img src={dexscreener} width={"10%"} />
             </a>
           </Col>
         </Row>
