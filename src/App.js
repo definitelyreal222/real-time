@@ -24,6 +24,10 @@ import Iframe from "react-iframe";
 
 const videos = [
   {
+    title: "JOIN THE ARMY OF THE DEAD",
+    id: "950967171",
+  },
+  {
     title: "BUTT-PLUG IN YOUR EARS",
     id: "949767112",
   },
