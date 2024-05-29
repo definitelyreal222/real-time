@@ -17,10 +17,10 @@ import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
 import guideButton from "./img/howbuy.png";
 import buyguide from "./img/guide.png";
-import tokenomics from "./img/tokenomics.png";
 import header from "./img/header.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Iframe from "react-iframe";
+import WarningBanner from "./WarningBanner";
 
 const videos = [
   {
@@ -241,6 +241,7 @@ function Navigation() {
           <Nav.Link href="#videos">VIDEOS</Nav.Link>
           <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
           <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
+          <Nav.Link href="#socials">SOCIALS</Nav.Link>
           <Nav.Link href={buyUrl}>
             <a href={buyUrl} target="_blank" rel="noopener noreferrer">
               BUY NOW
@@ -253,9 +254,34 @@ function Navigation() {
 }
 
 function App() {
+  const [isBlocked, setIsBlocked] = useState(false);
+
+  useEffect(() => {
+    const checkIfBlocked = async () => {
+      try {
+        const url = "https://player.vimeo.com/video/" + videos[0].id;
+        console.log({ url });
+        const response = await fetch(url, {
+          mode: "no-cors",
+        });
+        if (response.status === 0) {
+          setIsBlocked(false);
+        } else {
+          setIsBlocked(true);
+        }
+      } catch (error) {
+        console.error({ error });
+        setIsBlocked(true);
+      }
+    };
+    checkIfBlocked();
+  }, []);
+
   return (
     <div className="App" id="home">
       <Navigation />
+      {isBlocked ? <WarningBanner /> : null}
+
       <Container className="mt-5" fluid>
         <Row id="buynow">
           <h1 className="banner">
@@ -308,7 +334,7 @@ function App() {
         <Row id="roadmap">
           <img src={roadmap} width={"100%"} />
         </Row>
-        <Row>
+        <Row id="socials">
           <Col>
             <a
               href="https://twitter.com/thedeadpoolcoin"
