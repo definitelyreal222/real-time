@@ -6,6 +6,7 @@ import roadmap from "./img/roadmap.png";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import xicon from "./img/x.icon.svg";
 import tgicon from "./img/tg.icon.png";
+import yticon from "./img/yt.icon.png";
 import jupicon from "./img/jup.icon.svg";
 import ghicon from "./img/gh.icon.svg";
 import solicon from "./img/sol.icon.png";
@@ -21,6 +22,7 @@ import header from "./img/header.png";
 import { useState, useEffect } from "react";
 import Iframe from "react-iframe";
 import WarningBanner from "./WarningBanner";
+import Social from "./Social";
 
 const videos = [
   {
@@ -70,6 +72,49 @@ const videos = [
   {
     title: "INFORMATION WANTS TO BE FREE",
     id: "949764461",
+  },
+];
+
+const socials = [
+  {
+    url: "https://twitter.com/thedeadpoolcoin",
+    icon: xicon,
+  },
+  {
+    url: "https://t.me/deadpoolcoinsol",
+    icon: tgicon,
+  },
+  {
+    url: "https://discord.gg/FdcxE6wYq6",
+    icon: discord,
+  },
+  {
+    url: "https://github.com/deadpoolcoin/website",
+    icon: ghicon,
+  },
+  {
+    url: "https://jup.ag/swap/SOL-9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6",
+    icon: jupicon,
+  },
+  {
+    url: "https://solscan.io/token/9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6",
+    icon: solicon,
+  },
+  {
+    url: "https://www.dextools.io/app/en/solana/pair-explorer/4a9CgJE7vGeMGTBUP48B13tsec9azkZFHGFGYUv36wvZ",
+    icon: dextools,
+  },
+  {
+    url: "https://dexscreener.com/solana/4a9cgje7vgemgtbup48b13tsec9azkzfhgfgyuv36wvz",
+    icon: dexscreener,
+  },
+  {
+    url: "https://www.minds.com/deadpoolcoin/",
+    icon: minds,
+  },
+  {
+    url: "https://www.youtube.com/channel/UCAlUGf1ihNHn10x2uT9oqKg",
+    icon: yticon,
   },
 ];
 
@@ -280,9 +325,8 @@ function App() {
   return (
     <div className="App" id="home">
       <Navigation />
-      {isBlocked ? <WarningBanner /> : null}
-
       <Container className="mt-5" fluid>
+        {isBlocked ? <WarningBanner /> : null}
         <Row id="buynow">
           <h1 className="banner">
             <img src={header} width={"100%"} />
@@ -336,78 +380,9 @@ function App() {
         </Row>
         <Row id="socials">
           <Col>
-            <a
-              href="https://twitter.com/thedeadpoolcoin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={xicon} width={"10%"} />
-            </a>
-            <a
-              href="https://t.me/deadpoolcoinsol"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={tgicon} width={"10%"} />
-            </a>
-            <a
-              href="https://discord.gg/FdcxE6wYq6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={discord} width={"10%"} />
-            </a>
-            <a
-              href="https://github.com/deadpoolcoin/website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={ghicon} width={"10%"} />
-            </a>
-            <a
-              href="https://jup.ag/swap/SOL-9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={jupicon} width={"10%"} />
-            </a>
-            <a
-              href="https://solscan.io/token/9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={solicon} width={"10%"} />
-            </a>
-            <a
-              href="https://www.dextools.io/app/en/solana/pair-explorer/4a9CgJE7vGeMGTBUP48B13tsec9azkZFHGFGYUv36wvZ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={dextools} width={"10%"} />
-            </a>
-            <a
-              href="https://dexscreener.com/solana/4a9cgje7vgemgtbup48b13tsec9azkzfhgfgyuv36wvz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={dexscreener} width={"10%"} />
-            </a>
-            <a
-              href="https://www.minds.com/deadpoolcoin/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5"
-            >
-              <img src={minds} width={"10%"} />
-            </a>
+            {socials.map((social, i) => (
+              <Social key={i} obj={social} />
+            ))}
           </Col>
         </Row>
         <Row>

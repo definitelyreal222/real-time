@@ -168,3 +168,7 @@ h1 {
     margin: 20px auto;
     font-size: clamp(2px, 4vw, 30px); /* Adjust font size dynamically */
 }
+
+.social-image {
+    padding-top: 8px;
+}
