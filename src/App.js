@@ -4,6 +4,7 @@ import buy from "./img/buynow.png";
 import icon from "./img/icon.png";
 import roadmap from "./img/roadmap.png";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
+
 import xicon from "./img/x.icon.svg";
 import tgicon from "./img/tg.icon.png";
 import yticon from "./img/yt.icon.png";
@@ -14,6 +15,8 @@ import discord from "./img/dc.icon.png";
 import dextools from "./img/dt.icon.png";
 import dexscreener from "./img/ds.icon.jpeg";
 import minds from "./img/minds.icon.png";
+import cmc from "./img/cmc.icon.svg";
+
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
 import guideButton from "./img/howbuy.png";
@@ -25,6 +28,10 @@ import WarningBanner from "./WarningBanner";
 import Social from "./Social";
 
 const videos = [
+  {
+    title: "INFLATION IS A SIN",
+    id: "952614539",
+  },
   {
     title: "JOIN THE ARMY OF THE DEAD",
     id: "950967171",
@@ -115,6 +122,10 @@ const socials = [
   {
     url: "https://www.youtube.com/channel/UCAlUGf1ihNHn10x2uT9oqKg",
     icon: yticon,
+  },
+  {
+    url: "https://coinmarketcap.com/currencies/deadpool/",
+    icon: cmc,
   },
 ];
 
@@ -289,7 +300,7 @@ function Navigation() {
           <Nav.Link href="#socials">SOCIALS</Nav.Link>
           <Nav.Link href={buyUrl}>
             <a href={buyUrl} target="_blank" rel="noopener noreferrer">
-              BUY NOW
+              BUY
             </a>
           </Nav.Link>
         </Nav>
