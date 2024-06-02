@@ -84,7 +84,7 @@ const videos = [
 
 const socials = [
   {
-    url: "https://twitter.com/thedeadpoolcoin",
+    url: "https://twitter.com/deadpoolcash",
     icon: xicon,
   },
   {
@@ -140,7 +140,7 @@ function BuyButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src={buy} className="img-fluid" />
+      <img src={buy} className="img-fluid" alt={"buy"} />
     </a>
   );
 }
@@ -159,10 +159,15 @@ function BuyersGuide() {
         src={guideButton}
         className="img-fluid"
         onClick={openModal}
-        // width={"72%"}
+        alt={"buyer's guide"}
       />
       <PopoverModal isOpen={isModalOpen} onClose={closeModal}>
-        <img src={buyguide} className="img-fluid" width={"100%"} />
+        <img
+          src={buyguide}
+          className="img-fluid"
+          width={"100%"}
+          alt={"buyer's guide"}
+        />
       </PopoverModal>
     </div>
   );
@@ -205,6 +210,7 @@ function Tokenomics() {
           paddingBottom: "40px",
           paddingRight: "20px",
         }}
+        alt={"tokenomics"}
       />
       TOKENOMICS
       <div className="list-container">
@@ -340,7 +346,7 @@ function App() {
         {isBlocked ? <WarningBanner /> : null}
         <Row id="buynow">
           <h1 className="banner">
-            <img src={header} width={"100%"} />
+            <img src={header} width={"100%"} alt={"header"} />
             {/* <img src={icon} width={"200px"} /> DEADPOOL COIN{" "} */}
           </h1>
         </Row>
@@ -387,7 +393,7 @@ function App() {
           <Tokenomics />
         </Row>
         <Row id="roadmap">
-          <img src={roadmap} width={"100%"} />
+          <img src={roadmap} width={"100%"} alt={"roadmap"} />
         </Row>
         <Row id="socials">
           <Col>
@@ -397,7 +403,7 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <img src={footer} width={"100%"} />
+          <img src={footer} width={"100%"} alt={"footer"} />
         </Row>
       </Container>
     </div>
