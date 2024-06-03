@@ -342,7 +342,7 @@ function App() {
   return (
     <div className="App" id="home">
       <Navigation />
-      <Container className="mt-5" fluid>
+      <Container fluid>
         {isBlocked ? <WarningBanner /> : null}
         <Row id="buynow">
           <h1 className="banner">
