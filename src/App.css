@@ -172,3 +172,11 @@ h1 {
 .social-image {
     padding-top: 8px;
 }
+
+.as-seen-on {
+    font-size: clamp(6px, 6vw, 80px); /* Adjust font size dynamically */
+}
+
+.as-seen-on-videos {
+    display: flex;
+}
