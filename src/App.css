@@ -35,6 +35,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -45,9 +46,9 @@
     flex-direction: row !important;
 }
 
-.navbar-nav .nav-link {
-    padding-right: 10px;
-    padding-left: 10px;
+.nav-link {
+    padding-right: 2vw;
+    padding-left: 2vw;
 }
 
 .navbar {
@@ -62,26 +63,36 @@ body {
 
 .button-box {
     display: flex;
-    flex-direction: row; /* Line them up side by side */
-    gap: 10px; /* Adds space between the buttons */
-    justify-content: center; /* Center buttons horizontally */
+    flex-direction: row;
+    /* Line them up side by side */
+    gap: 10px;
+    /* Adds space between the buttons */
+    justify-content: center;
+    /* Center buttons horizontally */
     padding: 20px;
 }
 
 .action-button,
 .action-button a {
-    flex: 1; /* Makes the buttons share available space equally */
-    display: flex; /* This ensures the flex properties apply to children */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-decoration: none; /* Removes underline from links */
-    cursor: pointer; /* Shows a pointer cursor on hover */
+    flex: 1;
+    /* Makes the buttons share available space equally */
+    display: flex;
+    /* This ensures the flex properties apply to children */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    text-decoration: none;
+    /* Removes underline from links */
+    cursor: pointer;
+    /* Shows a pointer cursor on hover */
 }
 
 /* Media query for screens smaller than 768px wide */
 @media (max-width: 768px) {
     .button-box {
-        flex-direction: column; /* Stack them vertically on small screens */
+        flex-direction: column;
+        /* Stack them vertically on small screens */
         align-items: center;
     }
 }
@@ -89,12 +100,14 @@ body {
 .list-container {
     display: flex;
     justify-content: center;
-    font-size: clamp(12px, 3vw, 28px); /* Adjust font size dynamically */
+    font-size: clamp(12px, 3vw, 28px);
+    /* Adjust font size dynamically */
 }
 
 .t-list {
     list-style: none;
-    padding-left: 0; /* Remove default padding */
+    padding-left: 0;
+    /* Remove default padding */
     text-align: left;
 }
 
@@ -106,12 +119,15 @@ body {
 
 .bullet {
     margin-right: 10px;
-    width: 20px; /* Adjust size as needed */
-    height: auto; /* Maintains aspect ratio */
+    width: 20px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintains aspect ratio */
 }
 
 .video-container {
-    font-size: clamp(6px, 1vw, 20px); /* Adjust font size dynamically */
+    font-size: clamp(6px, 1vw, 20px);
+    /* Adjust font size dynamically */
     position: relative;
     text-align: center;
     color: white;
@@ -126,12 +142,12 @@ body {
 }
 
 .tokenomics {
-    font-size: clamp(6px, 6vw, 80px); /* Adjust font size dynamically */
+    font-size: clamp(6px, 6vw, 80px);
+    /* Adjust font size dynamically */
 }
 
 .warning-banner {
     background-color: red;
-    /* border-color: #a94442; */
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
@@ -140,7 +156,7 @@ body {
     width: 100%;
     text-align: center;
     margin: 20px auto;
-    font-size: clamp(2px, 4vw, 30px); /* Adjust font size dynamically */
+    font-size: clamp(2px, 4vw, 30px);
 }
 
 .social-image {
@@ -148,21 +164,9 @@ body {
 }
 
 .as-seen-on {
-    font-size: clamp(6px, 6vw, 80px); /* Adjust font size dynamically */
-}
-
-.as-seen-on-videos {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    font-size: clamp(6px, 6vw, 80px);
 }
 
 html {
     scroll-padding-top: 75px;
-}
-
-body,
-html,
-.app {
-    width: 100%;
 }

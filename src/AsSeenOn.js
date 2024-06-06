@@ -1,13 +1,9 @@
 import React from "react";
-import ReactPlayer from "react-player";
+import YouTubeEmbed from "react-youtube-embed";
+
 import icon from "./img/icon.png";
 
-const urls = [
-  "https://www.youtube.com/watch?v=KBV0ELCiNZw",
-  "https://www.youtube.com/watch?v=5CxSFuzw3hI",
-  "https://www.youtube.com/watch?v=7BhXINkUeh8",
-  "https://www.youtube.com/watch?v=aJ42fI2dDI4",
-];
+const videoIds = ["KBV0ELCiNZw", "5CxSFuzw3hI", "7BhXINkUeh8", "aJ42fI2dDI4"];
 
 const AsSeenOn = () => {
   return (
@@ -24,8 +20,11 @@ const AsSeenOn = () => {
       />
       AS SEEN ON
       <div className="as-seen-on-videos">
-        {urls.map((url, i) => (
-          <ReactPlayer url={url} controls={true} />
+        {videoIds.map((id, i) => (
+          <div>
+            {/* <ReactPlayer url={url} controls={true} /> */}
+            <YouTubeEmbed id={id} />
+          </div>
         ))}
       </div>
     </div>
