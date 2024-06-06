@@ -202,27 +202,17 @@ function Tokenomics() {
 function Navigation() {
   return (
     <Navbar bg="black" variant="dark" expand="lg" fixed="top">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img
-            src={icon}
-            alt="icon"
-            width={"30"}
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#videos">VIDEOS</Nav.Link>
-          <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
-          <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
-          <Nav.Link href="#socials">SOCIALS</Nav.Link>
-          <Nav.Link href={buyUrl}>
-            <a href={buyUrl} target="_blank" rel="noopener noreferrer">
-              BUY
-            </a>
-          </Nav.Link>
-        </Nav>
-      </Container>
+      <Nav>
+        <Nav.Link href="#videos">VIDEOS</Nav.Link>
+        <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
+        <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
+        <Nav.Link href="#socials">SOCIALS</Nav.Link>
+        <Nav.Link href={buyUrl}>
+          <a href={buyUrl} target="_blank" rel="noopener noreferrer">
+            BUY
+          </a>
+        </Nav.Link>
+      </Nav>
     </Navbar>
   );
 }
@@ -259,7 +249,6 @@ function App() {
         <Row id="buynow">
           <h1 className="banner">
             <img src={header} width={"100%"} alt={"header"} />
-            {/* <img src={icon} width={"200px"} /> DEADPOOL COIN{" "} */}
           </h1>
         </Row>
         <Row id="videos">
@@ -300,8 +289,6 @@ function App() {
           </div>
         </Row>
         <Row id="tokenomics">
-          {/*<img src={bar} width={"100%"} />*/}
-          {/*<img src={tokenomics} width={"100%"} />*/}
           <Tokenomics />
         </Row>
         <Row id="asSeenOn">
