@@ -1,8 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
-import icon from "./img/icon.png";
-import roadmap from "./img/roadmap.png";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 
 import xicon from "./img/x.icon.svg";
@@ -26,6 +24,7 @@ import WarningBanner from "./WarningBanner";
 import Social from "./Social";
 import BuyersGuide from "./BuyersGuide";
 import AsSeenOn from "./AsSeenOn";
+import SectionTitle from "./SectionTitle";
 
 const videos = [
   {
@@ -78,7 +77,7 @@ const videos = [
   },
   {
     title: "INFORMATION WANTS TO BE FREE",
-    id: "949764461",
+    id: "954664489",
   },
 ];
 
@@ -174,17 +173,7 @@ function Tokenomics() {
 
   return (
     <div className={"tokenomics"}>
-      <img
-        src={icon}
-        style={{
-          width: "10%",
-          paddingTop: "40px",
-          paddingBottom: "40px",
-          paddingRight: "20px",
-        }}
-        alt={"tokenomics"}
-      />
-      TOKENOMICS
+      <SectionTitle text="TOKENOMICS" />
       <div className="list-container">
         <ul className={"t-list"}>
           {items.map((item, index) => (
@@ -195,6 +184,45 @@ function Tokenomics() {
           ))}
         </ul>
       </div>
+    </div>
+  );
+}
+
+function Roadmap() {
+  const items = [
+    <s>"April: Token Launch"</s>,
+    <s>"May: DEX Listings, CMC Listing, Twitter Partnerships"</s>,
+    "June: Deflationary Lottery Launch",
+    "July: CEX Listing, Twitter Storm, Movie Release",
+    "Nov: US Election, Deadpool for President!",
+  ];
+
+  return (
+    <div className={"tokenomics"}>
+      <SectionTitle text="ROADMAP" />
+      <div className="list-container">
+        <ul className={"t-list"}>
+          {items.map((item, index) => (
+            <li key={index}>
+              <img className={"bullet"} src={bullet} alt="Bullet" />
+              <div className={"t-text"}> {item} </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Socials() {
+  return (
+    <div>
+      <SectionTitle text="SOCIALS" />
+      <Col>
+        {socials.map((social, i) => (
+          <Social key={i} obj={social} />
+        ))}
+      </Col>
     </div>
   );
 }
@@ -295,14 +323,10 @@ function App() {
           <AsSeenOn />
         </Row>
         <Row id="roadmap">
-          <img src={roadmap} width={"100%"} alt={"roadmap"} />
+          <Roadmap />
         </Row>
         <Row id="socials">
-          <Col>
-            {socials.map((social, i) => (
-              <Social key={i} obj={social} />
-            ))}
-          </Col>
+          <Socials />
         </Row>
         <Row>
           <img src={footer} width={"100%"} alt={"footer"} />
