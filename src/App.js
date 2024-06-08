@@ -193,7 +193,7 @@ function Roadmap() {
     <s>"April: Token Launch"</s>,
     <s>"May: DEX Listings, CMC Listing, Twitter Partnerships"</s>,
     "June: Deflationary Lottery Launch",
-    "July: CEX Listing, Twitter Storm, Movie Release",
+    "July: CEX Listing, Twitter Storm, Movie Release 🔥🚀",
     "Nov: US Election, Deadpool for President!",
   ];
 
@@ -233,6 +233,7 @@ function Navigation() {
       <Nav>
         <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
+        <Nav.Link href="#asSeenOn">AS SEEN ON</Nav.Link>
         <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
         <Nav.Link href="#socials">SOCIALS</Nav.Link>
         <Nav.Link href={buyUrl}>
