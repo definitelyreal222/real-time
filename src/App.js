@@ -28,6 +28,10 @@ import SectionTitle from "./SectionTitle";
 
 const videos = [
   {
+    title: "ALIEN INVASION",
+    id: "955745180",
+  },
+  {
     title: "INFLATION IS A SIN",
     id: "952614539",
   },
@@ -233,7 +237,7 @@ function Navigation() {
       <Nav>
         <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
-        <Nav.Link href="#asSeenOn">AS SEEN ON</Nav.Link>
+        <Nav.Link href="#asSeenOn">MEDIA</Nav.Link>
         <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
         <Nav.Link href="#socials">SOCIALS</Nav.Link>
         <Nav.Link href={buyUrl}>
@@ -293,18 +297,10 @@ function App() {
                       "?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                     }
                     width="100%"
-                    // height="100%"
                     id={i}
                     className=""
                     display="block"
                     position="relative"
-                    styles={
-                      {
-                        // border: "1px solid #ccc",
-                        // borderRadius: "5px",
-                        // boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-                      }
-                    }
                   />
                 </div>
               </div>

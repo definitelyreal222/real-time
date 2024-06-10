@@ -7,7 +7,7 @@ const videoIds = ["KBV0ELCiNZw", "5CxSFuzw3hI", "7BhXINkUeh8", "aJ42fI2dDI4"];
 const AsSeenOn = () => {
   return (
     <div className="as-seen-on">
-      <SectionTitle text="AS SEEN ON" />
+      <SectionTitle text="MEDIA" />
       <div>
         {videoIds.map((id, i) => (
           <div className="as-seen-on-video">
