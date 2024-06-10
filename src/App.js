@@ -176,7 +176,7 @@ function Tokenomics() {
   ];
 
   return (
-    <div className={"tokenomics"}>
+    <div>
       <SectionTitle text="TOKENOMICS" />
       <div className="list-container">
         <ul className={"t-list"}>
@@ -194,15 +194,15 @@ function Tokenomics() {
 
 function Roadmap() {
   const items = [
-    <s>"April: Token Launch"</s>,
-    <s>"May: DEX Listings, CMC Listing, Twitter Partnerships"</s>,
+    <s>April: Token Launch</s>,
+    <s>May: DEX Listings, CMC Listing, Twitter Partnerships</s>,
     "June: Deflationary Lottery Launch",
     "July: CEX Listing, Twitter Storm, Movie Release 🔥🚀",
     "Nov: US Election, Deadpool for President!",
   ];
 
   return (
-    <div className={"tokenomics"}>
+    <div>
       <SectionTitle text="ROADMAP" />
       <div className="list-container">
         <ul className={"t-list"}>
