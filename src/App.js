@@ -14,6 +14,9 @@ import dextools from "./img/dt.icon.png";
 import dexscreener from "./img/ds.icon.jpeg";
 import minds from "./img/minds.icon.png";
 import cmc from "./img/cmc.icon.svg";
+import ig from "./img/ig.icon.png";
+import lt from "./img/lt.icon.svg";
+import tt from "./img/tt.icon.jpeg";
 
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
@@ -129,6 +132,18 @@ const socials = [
   {
     url: "https://coinmarketcap.com/currencies/deadpool/",
     icon: cmc,
+  },
+  {
+    url: "https://www.tiktok.com/@deadpool.cash",
+    icon: tt,
+  },
+  {
+    url: "https://linktr.ee/deadpoolcash",
+    icon: lt,
+  },
+  {
+    url: "https://www.instagram.com/deadpool.cash",
+    icon: ig,
   },
 ];
 
