@@ -17,6 +17,7 @@ import cmc from "./img/cmc.icon.svg";
 import ig from "./img/ig.icon.png";
 import lt from "./img/lt.icon.svg";
 import tt from "./img/tt.icon.jpeg";
+import reddit from "./img/rd.icon.svg";
 
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
@@ -144,6 +145,10 @@ const socials = [
   {
     url: "https://www.instagram.com/deadpool.cash",
     icon: ig,
+  },
+  {
+    url: "https://www.reddit.com/r/DeadpoolCash",
+    icon: reddit,
   },
 ];
 
