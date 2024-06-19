@@ -18,76 +18,18 @@ import ig from "./img/ig.icon.png";
 import lt from "./img/lt.icon.svg";
 import tt from "./img/tt.icon.jpeg";
 import reddit from "./img/rd.icon.svg";
+import rumble from "./img/rm.icon.png";
 
 import footer from "./img/footer.png";
 import bullet from "./img/icon.png";
 import header from "./img/header.png";
 import { useState, useEffect } from "react";
-import Iframe from "react-iframe";
 import WarningBanner from "./WarningBanner";
 import Social from "./Social";
 import BuyersGuide from "./BuyersGuide";
 import AsSeenOn from "./AsSeenOn";
 import SectionTitle from "./SectionTitle";
-
-const videos = [
-  {
-    title: "ALIEN INVASION",
-    id: "955745180",
-  },
-  {
-    title: "INFLATION IS A SIN",
-    id: "952614539",
-  },
-  {
-    title: "JOIN THE ARMY OF THE DEAD",
-    id: "950967171",
-  },
-  {
-    title: "BUTT-PLUG IN YOUR EARS",
-    id: "949767112",
-  },
-  {
-    title: "WHAT IS A MEMECOIN",
-    id: "949772170",
-  },
-  {
-    title: "IT'S A DEATH CULT",
-    id: "949771053",
-  },
-  {
-    title: "DUMB MONEY",
-    id: "949769170",
-  },
-  {
-    title: "OLD MONEY NEW MONEY",
-    id: "949770695",
-  },
-  {
-    title: "UNRUGGABLE TOKENOMICS",
-    id: "949772679",
-  },
-  {
-    title: "ABSURD ALLEGATIONS",
-    id: "949767985",
-  },
-  {
-    title: "LOSERS AND DEGENERATES",
-    id: "949771789",
-  },
-  {
-    title: "OPEN SOURCE FOR THE WIN",
-    id: "949770287",
-  },
-  {
-    title: "LET DADDY MANAGE THIS",
-    id: "949769610",
-  },
-  {
-    title: "INFORMATION WANTS TO BE FREE",
-    id: "954664489",
-  },
-];
+import Videos from "./Videos";
 
 const socials = [
   {
@@ -149,6 +91,10 @@ const socials = [
   {
     url: "https://www.reddit.com/r/DeadpoolCash",
     icon: reddit,
+  },
+  {
+    url: "https://rumble.com/c/c-6448323",
+    icon: rumble,
   },
 ];
 
@@ -276,7 +222,7 @@ function App() {
   useEffect(() => {
     const checkIfBlocked = async () => {
       try {
-        const url = "https://player.vimeo.com/video/" + videos[0].id;
+        const url = "https://player.vimeo.com/video/955745180";
         console.log({ url });
         const response = await fetch(url, {
           mode: "no-cors",
@@ -304,29 +250,7 @@ function App() {
             <img src={header} width={"100%"} alt={"header"} />
           </h1>
         </Row>
-        <Row id="videos">
-          {videos.map((video, i) => (
-            <Col sm={12} md={6} lg={4} key={i} className="mb-4">
-              <div className="video-container">
-                <h2>{video.title}</h2>
-                <div className="">
-                  <Iframe
-                    url={
-                      "https://player.vimeo.com/video/" +
-                      video.id +
-                      "?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    }
-                    width="100%"
-                    id={i}
-                    className=""
-                    display="block"
-                    position="relative"
-                  />
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
+        <Videos showUpdates={false} />
         <Row id="buynow">
           <div className={"button-box"}>
             <BuyButton />
@@ -341,6 +265,8 @@ function App() {
         </Row>
         <Row id="roadmap">
           <Roadmap />
+          <SectionTitle text="UPDATES" />
+          <Videos showUpdates={true} />
         </Row>
         <Row id="socials">
           <Socials />
