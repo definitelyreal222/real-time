@@ -4,6 +4,10 @@ import { Col, Row } from "react-bootstrap";
 
 const videos = [
   {
+    title: "LITTLE MISS SWIFTY",
+    id: "964301692",
+  },
+  {
     title: "JAILTATE",
     id: "963123111",
   },
@@ -16,7 +20,7 @@ const videos = [
     id: "952614539",
   },
   {
-    title: "JOIN THE ARMY OF THE DEAD",
+    title: "ARMY OF THE DEAD",
     id: "950967171",
   },
   {
