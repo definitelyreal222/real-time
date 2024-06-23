@@ -45,7 +45,7 @@ const socials = [
     icon: discord,
   },
   {
-    url: "https://github.com/deadpoolcoin/website",
+    url: "https://github.com/deadpoolcash/website",
     icon: ghicon,
   },
   {
