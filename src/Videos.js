@@ -71,6 +71,10 @@ const videos = [
 
 const updates = [
   {
+    title: "JUNE 24",
+    id: "965642171"
+  },
+  {
     title: "JUNE 17",
     id: "962299427",
   },
