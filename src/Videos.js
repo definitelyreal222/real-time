@@ -1,82 +1,81 @@
 import React from "react";
-import Iframe from "react-iframe";
 import { Col, Row } from "react-bootstrap";
 
 const videos = [
   {
     title: "LITTLE MISS SWIFTY",
-    id: "964301692",
+    id: "v50iao4",
   },
   {
     title: "JAILTATE",
-    id: "963123111",
+    id: "v50cbpd",
   },
   {
     title: "ALIEN INVASION",
-    id: "955745180",
+    id: "v50p693",
   },
   {
     title: "INFLATION IS A SIN",
-    id: "952614539",
+    id: "v522t5s",
   },
   {
     title: "ARMY OF THE DEAD",
-    id: "950967171",
+    id: "v522wqe",
   },
   {
     title: "BUTT-PLUG IN YOUR EARS",
-    id: "949767112",
+    id: "v522qvr",
   },
   {
     title: "WHAT IS A MEMECOIN",
-    id: "949772170",
+    id: "v522xi9",
   },
   {
     title: "IT'S A DEATH CULT",
-    id: "949771053",
+    id: "v522rhs",
   },
   {
     title: "DUMB MONEY",
-    id: "949769170",
+    id: "v51apbl",
   },
   {
     title: "OLD MONEY NEW MONEY",
-    id: "949770695",
+    id: "v522y6o",
   },
   {
     title: "UNRUGGABLE TOKENOMICS",
-    id: "949772679",
+    id: "v522yl0",
   },
   {
     title: "ABSURD ALLEGATIONS",
-    id: "949767985",
+    id: "v505a03",
   },
   {
     title: "LOSERS AND DEGENERATES",
-    id: "949771789",
+    id: "v522ysk",
   },
   {
     title: "OPEN SOURCE FOR THE WIN",
-    id: "949770287",
+    id: "v522z2r",
   },
   {
     title: "LET DADDY MANAGE THIS",
-    id: "949769610",
+    id: "v522zbq",
   },
   {
     title: "INFORMATION WANTS TO BE FREE",
-    id: "954664489",
+    id: "v522q3d",
   },
 ];
 
 const updates = [
-  // {
-  //   title: "JUNE 24",
-  //   id: "965642171"
-  // },
+  {
+    title: "JUNE 24",
+    id: "v52313f"
+  },
   {
     title: "JUNE 17",
-    id: "962299427",
+    id: "v522zv9",
   },
 ];
 
@@ -94,18 +93,8 @@ function Videos({ showUpdates }) {
           <div className="video-container">
             <h2>{video.title}</h2>
             <div className="">
-              <Iframe
-                url={
-                  "https://player.vimeo.com/video/" +
-                  video.id +
-                  "?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                }
-                width="100%"
-                id={i}
-                className=""
-                display="block"
-                position="relative"
-              />
+              <iframe class="rumble" width="100%" src={"https://rumble.com/embed/" + video.id + "/?pub=3qglap"}
+                      frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
         </Col>

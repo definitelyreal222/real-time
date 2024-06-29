@@ -222,7 +222,7 @@ function App() {
   useEffect(() => {
     const checkIfBlocked = async () => {
       try {
-        const url = "https://player.vimeo.com/video/955745180";
+        const url = "https://rumble.com/v53my2c-dumb-money.html?mref=3qglap&mrefc=12";
         console.log({ url });
         const response = await fetch(url, {
           mode: "no-cors",
