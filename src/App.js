@@ -92,10 +92,10 @@ const socials = [
     url: "https://www.reddit.com/r/DeadpoolCash",
     icon: reddit,
   },
-  {
-    url: "https://rumble.com/c/c-6448323",
-    icon: rumble,
-  },
+  // {
+  //   url: "https://rumble.com/c/c-6448323",
+  //   icon: rumble,
+  // },
 ];
 
 const buyUrl =
