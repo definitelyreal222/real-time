@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
+import casino from "./img/casino.png";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 
 import xicon from "./img/x.icon.svg";
@@ -18,10 +19,9 @@ import ig from "./img/ig.icon.png";
 import lt from "./img/lt.icon.svg";
 import tt from "./img/tt.icon.jpeg";
 import reddit from "./img/rd.icon.svg";
-import rumble from "./img/rm.icon.png";
 
 import footer from "./img/footer.png";
-import bullet from "./img/icon.png";
+import bullet from "./img/icon.svg";
 import header from "./img/header.png";
 import { useState, useEffect } from "react";
 import WarningBanner from "./WarningBanner";
@@ -30,6 +30,7 @@ import BuyersGuide from "./BuyersGuide";
 import AsSeenOn from "./AsSeenOn";
 import SectionTitle from "./SectionTitle";
 import Videos from "./Videos";
+import Tokenomics from "./Tokenomics";
 
 const socials = [
   {
@@ -100,6 +101,7 @@ const socials = [
 
 const buyUrl =
   "https://jup.ag/swap/SOL-9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6";
+const casinoUrl = "https://casino.deadpool.cash";
 
 function BuyButton() {
   return (
@@ -114,76 +116,30 @@ function BuyButton() {
   );
 }
 
-function Tokenomics() {
-  const items = [
-    "MINIMUM MARKETCAP: 475 SOL",
-    "WORLD'S FIRST DEEP FAKE MEMECOIN",
-    <div>
-      TOKEN ADDRESS:{" "}
-      <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://solscan.io/token/9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6"
-      >
-        9qywujQCJyECybwp...
-      </a>
-    </div>,
-    <div>
-      POOL ADDRESS:{" "}
-      <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://solscan.io/account/4a9CgJE7vGeMGTBUP48B13tsec9azkZFHGFGYUv36wvZ"
-      >
-        4a9CgJE7vGeMGTB...
-      </a>
-    </div>,
-    <div>
-      LIQUIDITY ADDED WITH 95% OF SUPPLY: {" "}
-      <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://solscan.io/tx/3vDkP38yz1gxxX7cSA3A5U9ZymzC9LSGdwRam4EmjRLzbhC3YRe7GsSZWW5cxu5hWDZKMX2eJMW95rDeNbZM2YFP"
-      >
-        3vDkP38yz1gxxX7c...
-      </a>
-    </div>,
-    <div>
-      LIQUIDITY LOCKED: {" "}
-      <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://solscan.io/tx/4WX9CSsJ85P66BWq86yhi7CaVZPvRFSPhk6RwCfrirkZXQjLPKhCWfCc982WjxrNcbF6iptizeGtpWAfvSuRG19W"
-      >
-        4WX9CSsJ85P66BWq...
-      </a>
-    </div>
-
-
-  ];
-
+function CasinoLink() {
   return (
-      <div>
-        <SectionTitle text="TOKENOMICS"/>
-        <div className="list-container">
-          <ul className={"t-list"}>
-            {items.map((item, index) => (
-                <li key={index}>
-                  <img className={"bullet"} src={bullet} alt="Bullet"/>
-                  <div className={"t-text"}> {item} </div>
-            </li>
-          ))}
-        </ul>
+      <div
+          className={"action-button"}
+          style={{ alignItems: "center", display: "flex" }}
+      >
+        <a
+            className={"action-button"}
+            href={casinoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          <img src={casino} className="img-fluid" alt={"casino"} />
+        </a>
       </div>
-    </div>
   );
 }
+
 
 function Roadmap() {
   const items = [
     <s>April: Token Launch</s>,
     <s>May: DEX Listings, CMC Listing, Twitter Partnerships</s>,
-    "June: Deflationary Lottery Launch",
+    <s>July: Casino Launch 🃏♦️♣️♥️♠️🎲 </s>,
     "July: CEX Listing, Twitter Storm, Movie Release 🔥🚀",
     "Nov: US Election, Deadpool for President!",
   ];
@@ -243,7 +199,7 @@ function App() {
   useEffect(() => {
     const checkIfBlocked = async () => {
       try {
-        const url = "https://rumble.com/v53my2c-dumb-money.html?mref=3qglap&mrefc=12";
+        const url = "https://youtube.com/embed/j5kAGGv0zz0";
         console.log({ url });
         const response = await fetch(url, {
           mode: "no-cors",
@@ -274,15 +230,16 @@ function App() {
         <Videos showUpdates={false} />
         <Row id="buynow">
           <div className={"button-box"}>
-            <BuyButton />
-            <BuyersGuide />
+            <BuyButton/>
+            <BuyersGuide/>
+            <CasinoLink/>
           </div>
         </Row>
         <Row id="tokenomics">
-          <Tokenomics />
+          <Tokenomics/>
         </Row>
         <Row id="asSeenOn">
-          <AsSeenOn />
+          <AsSeenOn/>
         </Row>
         <Row id="roadmap">
           <Roadmap />

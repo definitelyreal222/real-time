@@ -3,6 +3,10 @@ import { Col, Row } from "react-bootstrap";
 
 const videos = [
   {
+    title: "KING OF THE MARVEL INCELS",
+    url: "https://youtube.com/embed/j5kAGGv0zz0"
+  },
+  {
     title: "LITTLE MISS SWIFTY",
     url: "https://youtube.com/embed/rWzMk_kZgXs",
   },
@@ -93,8 +97,14 @@ function Videos({ showUpdates }) {
           <div className="video-container">
             <h2>{video.title}</h2>
             <div className="">
-              <iframe class="rumble" width="100%" src={video.url}
-                      frameborder="0" allowfullscreen></iframe>
+              <iframe
+                  class="youtube"
+                  width="100%"
+                  src={video.url}
+                  frameborder="0"
+                  allow="fullscreen"
+                  allowfullscreen
+              ></iframe>
             </div>
           </div>
         </Col>

@@ -1,5 +1,5 @@
 import React from "react";
-import icon from "./img/icon.png";
+import icon from "./img/icon.svg";
 
 const SectionTitle = ({ text }) => {
   return (
