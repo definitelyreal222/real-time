@@ -1,7 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
-import casino from "./img/casino.png";
+import arcade from "./img/arcade.png";
+import bar from "./img/bar.svg";
+import animation from './img/animation.gif';
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 
 import xicon from "./img/x.icon.svg";
@@ -23,13 +25,10 @@ import reddit from "./img/rd.icon.svg";
 import footer from "./img/footer.png";
 import bullet from "./img/icon.svg";
 import header from "./img/header.png";
-import { useState, useEffect } from "react";
-import WarningBanner from "./WarningBanner";
 import Social from "./Social";
 import BuyersGuide from "./BuyersGuide";
-import AsSeenOn from "./AsSeenOn";
 import SectionTitle from "./SectionTitle";
-import Videos from "./Videos";
+import {Videos, Headliner} from "./Videos";
 import Tokenomics from "./Tokenomics";
 
 const socials = [
@@ -101,7 +100,7 @@ const socials = [
 
 const buyUrl =
   "https://jup.ag/swap/SOL-9qywujQCJyECybwpNsM4YTBRnakjDS23MdJHGRYVeLm6";
-const casinoUrl = "https://casino.deadpool.cash";
+const arcadeUrl = "https://arcade.deadpool.cash";
 
 function BuyButton() {
   return (
@@ -116,7 +115,7 @@ function BuyButton() {
   );
 }
 
-function CasinoLink() {
+function ArcadeLink() {
   return (
       <div
           className={"action-button"}
@@ -124,23 +123,22 @@ function CasinoLink() {
       >
         <a
             className={"action-button"}
-            href={casinoUrl}
+            href={arcadeUrl}
             target="_blank"
             rel="noopener noreferrer"
         >
-          <img src={casino} className="img-fluid" alt={"casino"} />
+          <img src={arcade} className="img-fluid" alt={"arcade"} />
         </a>
       </div>
   );
 }
 
-
 function Roadmap() {
   const items = [
     <s>April: Token Launch</s>,
     <s>May: DEX Listings, CMC Listing, Twitter Partnerships</s>,
-    <s>July: Casino Launch 🃏♦️♣️♥️♠️🎲 </s>,
-    "July: CEX Listing, Twitter Storm, Movie Release 🔥🚀",
+    <s>July: Arcade Launch 🃏♦️♣️♥️♠️🎲 </s>,
+    "July: Twitter Storm, Movie Release 🔥🚀",
     "Nov: US Election, Deadpool for President!",
   ];
 
@@ -164,7 +162,7 @@ function Roadmap() {
 function Socials() {
   return (
     <div>
-      <SectionTitle text="SOCIALS" />
+      <SectionTitle text="JOIN THE ARMY OF THE DEAD" />
       <Col>
         {socials.map((social, i) => (
           <Social key={i} obj={social} />
@@ -194,63 +192,47 @@ function Navigation() {
 }
 
 function App() {
-  const [isBlocked, setIsBlocked] = useState(false);
-
-  useEffect(() => {
-    const checkIfBlocked = async () => {
-      try {
-        const url = "https://youtube.com/embed/j5kAGGv0zz0";
-        console.log({ url });
-        const response = await fetch(url, {
-          mode: "no-cors",
-        });
-        if (response.status === 0) {
-          setIsBlocked(false);
-        } else {
-          setIsBlocked(true);
-        }
-      } catch (error) {
-        console.error({ error });
-        setIsBlocked(true);
-      }
-    };
-    checkIfBlocked();
-  }, []);
-
   return (
     <div className="App" id="home">
       <Navigation />
       <Container fluid>
-        {isBlocked ? <WarningBanner /> : null}
-        <Row id="buynow">
+        <Row>
           <h1 className="banner">
-            <img src={header} width={"100%"} alt={"header"} />
+            <img src={animation} width={"100%"} alt={"animation"}/>
           </h1>
         </Row>
-        <Videos showUpdates={false} />
+        <Row id="buynow">
+          <h1 className="banner">
+            <img src={header} width={"100%"} alt={"header"}/>
+          </h1>
+        </Row>
+        <Headliner/>
+        <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
+        <Videos type='trolls'/>
         <Row id="buynow">
           <div className={"button-box"}>
             <BuyButton/>
             <BuyersGuide/>
-            <CasinoLink/>
+            <ArcadeLink/>
           </div>
         </Row>
         <Row id="tokenomics">
           <Tokenomics/>
         </Row>
         <Row id="asSeenOn">
-          <AsSeenOn/>
+          <SectionTitle text="MEDIA"/>
+          <Videos type={'media'}/>
         </Row>
         <Row id="roadmap">
-          <Roadmap />
-          <SectionTitle text="UPDATES" />
-          <Videos showUpdates={true} />
+          <Roadmap/>
+          {/*<SectionTitle text="UPDATES"/>*/}
+          {/*<Videos type={'updates'}/>*/}
         </Row>
         <Row id="socials">
-          <Socials />
+          <Socials/>
         </Row>
         <Row>
-          <img src={footer} width={"100%"} alt={"footer"} />
+          <img src={footer} width={"100%"} alt={"footer"}/>
         </Row>
       </Container>
     </div>

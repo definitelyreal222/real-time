@@ -158,14 +158,6 @@ body {
     padding-top: 8px;
 }
 
-.as-seen-on {
-    font-size: clamp(6px, 6vw, 80px);
-}
-
-.as-seen-on-video {
-    margin-bottom: 10px;
-}
-
 html {
     scroll-padding-top: 75px;
 }
@@ -179,4 +171,20 @@ html {
     padding-top: 40px;
     padding-bottom: 40px;
     padding-right: 3%;
+}
+
+.bar {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.copy-button {
+    margin-left: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
