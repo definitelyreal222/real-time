@@ -20,7 +20,6 @@ const Tokenomics = () => {
     };
 
     const items = [
-        "WORLD'S FIRST DEEP FAKE MEMECOIN",
         <div>
             <a
                 target="_blank"
@@ -31,7 +30,7 @@ const Tokenomics = () => {
             </a>
         </div>,
         "BUY / SELL TAX : 0%",
-        "TOKEN SUPPLY : 1,000,000,000",
+        "TOKEN SUPPLY : 1B",
         <div style={{alignItems:'center', display:'flex'}}>
             <a
                 target="_blank"

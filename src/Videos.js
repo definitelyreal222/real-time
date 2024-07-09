@@ -19,11 +19,6 @@ const trolls = [
     id: "jsDQK7mdbKk"
   },
   {
-    title: "ALIEN INVASION",
-    url: "https://youtube.com/embed/lrqRq4HIVf0",
-    id: "lrqRq4HIVf0"
-  },
-  {
     title: "INFLATION IS A SIN",
     url: "https://youtube.com/embed/VcEWKwq08do",
     id: "VcEWKwq08do"
@@ -49,11 +44,6 @@ const trolls = [
     id: "ibtCqKg16dc"
   },
   {
-    title: "DUMB MONEY",
-    url: "https://youtube.com/embed/EBV1slnh_jY",
-    id: "EBV1slnh_jY"
-  },
-  {
     title: "OLD MONEY NEW MONEY",
     url: "https://youtube.com/embed/jAmF0-m0PnM",
     id: "jAmF0-m0PnM"
@@ -62,11 +52,6 @@ const trolls = [
     title: "UNRUGGABLE TOKENOMICS",
     url: "https://youtube.com/embed/21KUROh5yqc",
     id: "21KUROh5yqc"
-  },
-  {
-    title: "ABSURD ALLEGATIONS",
-    url: "https://youtube.com/embed/fIcjQt5albg",
-    id: "fIcjQt5albg"
   },
   {
     title: "LOSERS AND DEGENERATES",
@@ -89,6 +74,24 @@ const trolls = [
   //   id: "MnkG7b4Yp7Y"
   // },
 ];
+
+const highlights = [
+  {
+    title: "ABSURD ALLEGATIONS",
+    url: "https://youtube.com/embed/fIcjQt5albg",
+    id: "fIcjQt5albg"
+  },
+  {
+    title: "ALIEN INVASION",
+    url: "https://youtube.com/embed/lrqRq4HIVf0",
+    id: "lrqRq4HIVf0"
+  },
+  {
+    title: "DUMB MONEY",
+    url: "https://youtube.com/embed/EBV1slnh_jY",
+    id: "EBV1slnh_jY"
+  },
+]
 
 const updates = [
   {
@@ -129,6 +132,7 @@ const media = [
 export function Headliner() {
   return (
       <div className="as-seen-on-video">
+        <h1 style={{marginBottom: '45px'}}>THE ORIGINAL DEEP FAKE MEMECOIN</h1>
         {/*<h2>{'INFORMATION WANTS TO BE FREE'}</h2>*/}
         <YouTubeEmbed id={'MnkG7b4Yp7Y'}/>
       </div>
@@ -137,15 +141,20 @@ export function Headliner() {
 
 export function Videos({type}) {
   let vids;
+  let lg = 4
   switch (type) {
     case 'media':
       vids = media;
+      lg = 3
       break;
     case 'updates':
       vids = updates;
       break;
     case 'trolls':
       vids = trolls;
+      break;
+    case 'highlights':
+      vids = highlights;
       break;
     default:
       console.error("Unknown video type: ", type)
@@ -154,7 +163,7 @@ export function Videos({type}) {
   return (
     <Row id="videos">
       {vids.map((video, i) => (
-        <Col sm={12} md={6} lg={4} key={i} className="mb-4">
+        <Col sm={12} md={6} lg={lg} key={i} className="mb-4">
           <div className="video-container">
             <h2>{video.title}</h2>
             <div className="">

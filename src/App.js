@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
 import arcade from "./img/arcade.png";
-import bar from "./img/bar.svg";
+import bar from "./img/bar.png";
 import animation from './img/animation.gif';
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 
@@ -207,6 +207,8 @@ function App() {
           </h1>
         </Row>
         <Headliner/>
+        <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
+        <Videos type={'highlights'} />
         <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
         <Videos type='trolls'/>
         <Row id="buynow">
