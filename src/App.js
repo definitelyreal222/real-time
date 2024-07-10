@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
 import arcade from "./img/arcade.png";
+import comicHeader from './img/comic-header.png';
 import bar from "./img/bar.png";
 import animation from './img/animation.gif';
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
@@ -30,6 +31,10 @@ import BuyersGuide from "./BuyersGuide";
 import SectionTitle from "./SectionTitle";
 import {Videos, Headliner} from "./Videos";
 import Tokenomics from "./Tokenomics";
+import ComicPage from "./ComicPage";
+import Panel from './Panel';
+import React from "react";
+import FirstPage from "./FirstPage";
 
 const socials = [
   {
@@ -194,13 +199,15 @@ function Navigation() {
 function App() {
   return (
     <div className="App" id="home">
-      <Navigation />
-      <Container fluid>
+      {/*<FirstPage />*/}
+      <Navigation/>
+      <Container className={"comic-section"} fluid>
         <Row>
           <h1 className="banner">
             <img src={animation} width={"100%"} alt={"animation"}/>
           </h1>
         </Row>
+
         <Row id="buynow">
           <h1 className="banner">
             <img src={header} width={"100%"} alt={"header"}/>
@@ -208,7 +215,7 @@ function App() {
         </Row>
         <Headliner/>
         <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
-        <Videos type={'highlights'} />
+        <Videos type={'highlights'}/>
         <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
         <Videos type='trolls'/>
         <Row id="buynow">

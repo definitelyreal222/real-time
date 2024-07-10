@@ -3,6 +3,7 @@
     font-family: "Impact", Impact, Haettenschweiler, "Arial Narrow Bold",
         sans-serif;
     color: white;
+    background-color: black;
 }
 
 .App-logo {
@@ -187,4 +188,13 @@ html {
     color: white;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.comic-page {
+    margin: 3%;
+}
+
+.comic-image {
+    border-color: black;
+    border-width: 5px;
 }

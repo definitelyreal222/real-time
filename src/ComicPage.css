@@ -1,0 +1,55 @@
+.comic-page-wrapper {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+.comic-page {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+}
+
+.panel {
+    border: 0px solid white;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.panel-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.panel-large {
+    padding-top: 50%; /* Aspect ratio of 1:2 */
+}
+
+.panel-medium {
+    padding-top: 75%; /* Aspect ratio of 4:3 */
+}
+
+.panel-wide {
+    padding-top: 25%; /* Aspect ratio of 4:1 */
+}
