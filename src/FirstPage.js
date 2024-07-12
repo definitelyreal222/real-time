@@ -1,13 +1,15 @@
 import React from 'react';
 import ComicPage from "./ComicPage";
 import Panel from "./Panel";
+import header from "./img/comic-01.png"
 import comicHeader from "./img/comic-header.png";
 
 const FirstPage = () => {
     return (
         <ComicPage>
             <div className="row">
-                <Panel size="wide" height={'10px'} backgroundImage={comicHeader}>
+                <Panel size="wide" height={'100%'} >
+                    <img src={header} className={"content-image"} />
                     Panel 1
                 </Panel>
             </div>
