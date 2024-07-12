@@ -1,17 +1,17 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
-import sound from "./img/sound.png";
+import scope from "./img/scope.png";
 import Roadmap from "./Roadmap";
 
 const SixthRow = () => {
     return (
         <Row className={"align-items-center"} id="roadmap" >
-            <Col xs={12} md={6} className="d-flex align-items-center">
+            <Col xs={12} md={6} className="d-flex justify-content-center align-items-center">
                 <Roadmap />
             </Col>
             <Col xs={12} md={6} className="mb-3 mb-md-0">
                 <img
-                    src={sound}
+                    src={scope}
                     alt="word"
                     className="img-fluid"
                 />
