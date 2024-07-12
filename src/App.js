@@ -156,11 +156,11 @@ function Navigation() {
   return (
     <Navbar bg="black" variant="dark" expand="lg" fixed="top">
       <Nav>
-        <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
         <Nav.Link href="#asSeenOn">MEDIA</Nav.Link>
         <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
         <Nav.Link href="#socials">SOCIALS</Nav.Link>
+        <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href={buyUrl}>
           <a href={buyUrl} target="_blank" rel="noopener noreferrer">
             BUY

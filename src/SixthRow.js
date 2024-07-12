@@ -5,7 +5,7 @@ import Roadmap from "./Roadmap";
 
 const SixthRow = () => {
     return (
-        <Row className={"align-items-center"}>
+        <Row className={"align-items-center"} id="roadmap" >
             <Col xs={12} md={6} className="d-flex align-items-center">
                 <Roadmap />
             </Col>

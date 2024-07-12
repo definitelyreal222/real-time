@@ -161,7 +161,7 @@ export function Videos({type}) {
   }
 
   return (
-    <Row id="videos">
+    <Row id={type === 'trolls' ? 'videos' : ''}>
       {vids.map((video, i) => (
         <Col sm={12} md={6} lg={lg} key={i} className="mb-4">
           <div className="video-container">
