@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import buy from "./img/buynow.png";
 import arcade from "./img/arcade.png";
-import comicHeader from './img/comic-header.png';
 import bar from "./img/bar.png";
 import animation from './img/animation.gif';
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
@@ -30,11 +29,13 @@ import Social from "./Social";
 import BuyersGuide from "./BuyersGuide";
 import SectionTitle from "./SectionTitle";
 import {Videos, Headliner} from "./Videos";
-import Tokenomics from "./Tokenomics";
-import ComicPage from "./ComicPage";
-import Panel from './Panel';
 import React from "react";
-import FirstPage from "./FirstPage";
+import FirstRow from './FirstRow'
+import SecondRow from "./SecondRow";
+import ThirdRow from "./ThirdRow";
+import FourthRow from "./FourthRow";
+import FifthRow from './FifthRow';
+import SixthRow from './SixthRow';
 
 const socials = [
   {
@@ -45,10 +46,10 @@ const socials = [
     url: "https://t.me/deadpoolcoinsol",
     icon: tgicon,
   },
-  {
-    url: "https://discord.gg/FdcxE6wYq6",
-    icon: discord,
-  },
+  // {
+  //   url: "https://discord.gg/FdcxE6wYq6",
+  //   icon: discord,
+  // },
   {
     url: "https://github.com/deadpoolcash/website",
     icon: ghicon,
@@ -138,32 +139,6 @@ function ArcadeLink() {
   );
 }
 
-function Roadmap() {
-  const items = [
-    <s>April: Token Launch</s>,
-    <s>May: DEX Listings, CMC Listing, Twitter Partnerships</s>,
-    <s>July: Arcade Launch 🃏♦️♣️♥️♠️🎲 </s>,
-    "July: Twitter Storm, Movie Release 🔥🚀",
-    "Nov: US Election, Deadpool for President!",
-  ];
-
-  return (
-    <div>
-      <SectionTitle text="ROADMAP" />
-      <div className="list-container">
-        <ul className={"t-list"}>
-          {items.map((item, index) => (
-            <li key={index}>
-              <img className={"bullet"} src={bullet} alt="Bullet" />
-              <div className={"t-text"}> {item} </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
 function Socials() {
   return (
     <div>
@@ -181,11 +156,11 @@ function Navigation() {
   return (
     <Navbar bg="black" variant="dark" expand="lg" fixed="top">
       <Nav>
-        <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
         <Nav.Link href="#asSeenOn">MEDIA</Nav.Link>
         <Nav.Link href="#roadmap">ROADMAP</Nav.Link>
         <Nav.Link href="#socials">SOCIALS</Nav.Link>
+        <Nav.Link href="#videos">VIDEOS</Nav.Link>
         <Nav.Link href={buyUrl}>
           <a href={buyUrl} target="_blank" rel="noopener noreferrer">
             BUY
@@ -201,51 +176,46 @@ function App() {
     <div className="App" id="home">
       {/*<FirstPage />*/}
       <Navigation/>
-      <Container className={"comic-section"} fluid>
+      <Container fluid className={"p-0"}>
+        <div className="header-container">
+          <div className="header-background">
+            <img src={header} className={"header-image"} width={"50%"} alt={"header"}/>
+            <Row id="buynow">
+              <div className={"button-box"}>
+                <BuyButton/>
+                <BuyersGuide/>
+                <ArcadeLink/>
+              </div>
+            </Row>
+          </div>
+        </div>
+        <FirstRow />
+        <SecondRow />
+        <ThirdRow />
+        <FourthRow />
+        <FifthRow />
         <Row>
           <h1 className="banner">
             <img src={animation} width={"100%"} alt={"animation"}/>
           </h1>
         </Row>
-
-        <Row id="buynow">
-          <h1 className="banner">
-            <img src={header} width={"100%"} alt={"header"}/>
-          </h1>
-        </Row>
-        <Headliner/>
         <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
-        <Videos type={'highlights'}/>
-        <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
-        <Videos type='trolls'/>
-        <Row id="buynow">
-          <div className={"button-box"}>
-            <BuyButton/>
-            <BuyersGuide/>
-            <ArcadeLink/>
-          </div>
-        </Row>
-        <Row id="tokenomics">
-          <Tokenomics/>
-        </Row>
         <Row id="asSeenOn">
           <SectionTitle text="MEDIA"/>
           <Videos type={'media'}/>
         </Row>
-        <Row id="roadmap">
-          <Roadmap/>
-          {/*<SectionTitle text="UPDATES"/>*/}
-          {/*<Videos type={'updates'}/>*/}
-        </Row>
-        <Row id="socials">
-          <Socials/>
-        </Row>
-        <Row>
-          <img src={footer} width={"100%"} alt={"footer"}/>
-        </Row>
+        <SixthRow />
+          <Row id="socials">
+            <Socials/>
+          </Row>
+          <Row>
+            <img src={footer} width={"100%"} alt={"footer"}/>
+          </Row>
+        <Videos type='trolls'/>
+
       </Container>
     </div>
-  );
+);
 }
 
 export default App;
