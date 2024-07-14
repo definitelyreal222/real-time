@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
-import sword from "./img/sword.png";
+import toke from "./img/tokenomics.png";
 import Tokenomics from "./Tokenomics";
 
 const FifthRow = () => {
@@ -11,8 +11,8 @@ const FifthRow = () => {
             </Col>
             <Col xs={12} md={6} className="mb-3 mb-md-0">
                 <img
-                    src={sword}
-                    alt="word"
+                    src={toke}
+                    alt="toke"
                     className="img-fluid"
                 />
             </Col>

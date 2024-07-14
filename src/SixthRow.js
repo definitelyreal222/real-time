@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
-import scope from "./img/scope.png";
+import scope from "./img/cash-gun.png";
 import Roadmap from "./Roadmap";
 
 const SixthRow = () => {
@@ -12,7 +12,7 @@ const SixthRow = () => {
             <Col xs={12} md={6} className="mb-3 mb-md-0">
                 <img
                     src={scope}
-                    alt="word"
+                    alt="scope"
                     className="img-fluid"
                 />
             </Col>
