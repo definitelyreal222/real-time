@@ -101,7 +101,8 @@ body {
 .list-container {
     display: flex;
     justify-content: center;
-    font-size: clamp(15px, 3vw, 30px);
+    margin-left: 15px;
+    font-size: clamp(20px, 4vw, 35px);
     /* Adjust font size dynamically */
 }
 
@@ -120,7 +121,7 @@ body {
 
 .bullet {
     margin-right: 10px;
-    width: 3vw;
+    width: 4vw;
     /* Adjust size as needed */
     height: auto;
     /* Maintains aspect ratio */

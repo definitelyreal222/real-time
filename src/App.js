@@ -194,23 +194,18 @@ function App() {
         <ThirdRow />
         <FourthRow />
         <FifthRow />
-        <Row>
-          <h1 className="banner">
-            <img src={animation} width={"100%"} alt={"animation"}/>
-          </h1>
-        </Row>
-        <img src={bar} width={"100%"} className={'bar'} alt={"bar"}/>
+        <img src={animation} width={"100%"} alt={"animation"}/>
         <Row id="asSeenOn">
           <SectionTitle text="MEDIA"/>
           <Videos type={'media'}/>
         </Row>
         <SixthRow />
-          <Row id="socials">
-            <Socials/>
-          </Row>
-          <Row>
-            <img src={footer} width={"100%"} alt={"footer"}/>
-          </Row>
+        <Row id="socials">
+          <Socials/>
+        </Row>
+        <Row>
+          <img src={footer} width={"100%"} alt={"footer"}/>
+        </Row>
         <Videos type='trolls'/>
 
       </Container>
