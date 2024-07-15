@@ -36,6 +36,11 @@ import ThirdRow from "./ThirdRow";
 import FourthRow from "./FourthRow";
 import FifthRow from './FifthRow';
 import SixthRow from './SixthRow';
+import ContentRow from "./ContentRow";
+import grenade from "./img/grenade.png";
+import circleGun from "./img/circle-gun.png";
+import whale from "./img/whale.png";
+import mil from "./img/mil.png";
 
 const socials = [
   {
@@ -154,7 +159,7 @@ function Socials() {
 
 function Navigation() {
   return (
-    <Navbar bg="black" variant="dark" expand="lg" fixed="top">
+    <Navbar bg="black" variant="dark" expand="lg" className={""} > {/* fixed="top" */}
       <Nav>
         <Nav.Link href="#tokenomics">TOKENOMICS</Nav.Link>
         <Nav.Link href="#asSeenOn">MEDIA</Nav.Link>
@@ -173,44 +178,62 @@ function Navigation() {
 
 function App() {
   return (
-    <div className="App" id="home">
-      {/*<FirstPage />*/}
-      <Navigation/>
-      <Container fluid className={"p-0"}>
-        <div className="header-container">
-          <div className="header-background">
-            <img src={header} className={"header-image"} width={"50%"} alt={"header"}/>
-            <Row id="buynow">
-              <div className={"button-box"}>
-                <BuyButton/>
-                <BuyersGuide/>
-                <ArcadeLink/>
-              </div>
-            </Row>
-          </div>
+      <div className="App" id="home">
+        <Navigation/>
+        <div className={"banner"}>
+          <img src={header} className={"banner-image"} alt={"header"}/>
         </div>
-        <FirstRow />
-        <SecondRow />
-        <ThirdRow />
-        <FourthRow />
-        <FifthRow />
-        <img src={animation} width={"100%"} alt={"animation"}/>
-        <Row id="asSeenOn">
-          <SectionTitle text="MEDIA"/>
-          <Videos type={'media'}/>
-        </Row>
-        <SixthRow />
-        <Row id="socials">
-          <Socials/>
-        </Row>
-        <Row>
-          <img src={footer} width={"100%"} alt={"footer"}/>
-        </Row>
-        <Videos type='trolls'/>
+        <Container fluid className={"p-0"}>
+          <div className="header-container">
+            <div className="header-background">
+              <Row id="buynow">
+                <div className={"button-box"}>
+                  <BuyButton/>
+                  <BuyersGuide/>
+                  <ArcadeLink/>
+                </div>
+              </Row>
+            </div>
+          </div>
+          <ContentRow
+              videoSrc={"https://www.youtube.com/embed/MnkG7b4Yp7Y"}
+              imageSrc={grenade}
+              isReversed={false}
+          />
+          <ContentRow
+              videoSrc={"https://www.youtube.com/embed/fIcjQt5albg"}
+              imageSrc={circleGun}
+              isReversed={true}
+          />
+          <ContentRow
+              videoSrc={"https://www.youtube.com/embed/lrqRq4HIVf0"}
+              imageSrc={whale}
+              isReversed={false}
+          />
+          <ContentRow
+              videoSrc={"https://www.youtube.com/embed/EBV1slnh_jY"}
+              imageSrc={mil}
+              isReversed={true}
+          />
 
-      </Container>
-    </div>
-);
+          <FifthRow/>
+          <img src={animation} width={"100%"} alt={"animation"}/>
+          <Row id="asSeenOn">
+            <SectionTitle text="MEDIA"/>
+            <Videos type={'media'}/>
+          </Row>
+          <SixthRow/>
+          <Row id="socials">
+            <Socials/>
+          </Row>
+          <Row>
+            <img src={footer} width={"100%"} alt={"footer"}/>
+          </Row>
+          <Videos type='trolls'/>
+
+        </Container>
+      </div>
+  );
 }
 
 export default App;

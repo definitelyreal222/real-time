@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
-import scope from "./img/cash-gun.png";
+import scope from "./img/scope.png";
 import Roadmap from "./Roadmap";
 
 const SixthRow = () => {
