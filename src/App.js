@@ -30,10 +30,6 @@ import BuyersGuide from "./BuyersGuide";
 import SectionTitle from "./SectionTitle";
 import {Videos, Headliner} from "./Videos";
 import React from "react";
-import FirstRow from './FirstRow'
-import SecondRow from "./SecondRow";
-import ThirdRow from "./ThirdRow";
-import FourthRow from "./FourthRow";
 import FifthRow from './FifthRow';
 import SixthRow from './SixthRow';
 import ContentRow from "./ContentRow";
