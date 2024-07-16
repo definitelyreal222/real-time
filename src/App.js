@@ -28,7 +28,7 @@ import header from "./img/header.png";
 import Social from "./Social";
 import BuyersGuide from "./BuyersGuide";
 import SectionTitle from "./SectionTitle";
-import {Videos, Headliner} from "./Videos";
+import {Videos} from "./Videos";
 import React from "react";
 import FifthRow from './FifthRow';
 import SixthRow from './SixthRow';

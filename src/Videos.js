@@ -1,5 +1,4 @@
 import React from "react";
-import YouTubeEmbed from "react-youtube-embed";
 import { Col, Row } from "react-bootstrap";
 
 const trolls = [
@@ -109,35 +108,26 @@ const updates = [
 const media = [
   {
     title: "",
-    url: "",
+    url: "https://youtube.com/embed/KBV0ELCiNZw",
     id: "KBV0ELCiNZw",
   },
   {
     title: "",
-    url: "",
+    url: "https://youtube.com/embed/5CxSFuzw3hI",
     id: "5CxSFuzw3hI",
   },
   {
     title: "",
-    url: "",
+    url: "https://youtube.com/embed/7BhXINkUeh8",
     id: "7BhXINkUeh8",
   },
   {
     title: "",
-    url: "",
+    url: "https://youtube.com/embed/aJ42fI2dDI4",
     id: "aJ42fI2dDI4",
   },
 ]
 
-export function Headliner() {
-  return (
-      <div className="as-seen-on-video">
-        <h1 style={{marginBottom: '45px'}}>THE ORIGINAL DEEP FAKE MEMECOIN</h1>
-        {/*<h2>{'INFORMATION WANTS TO BE FREE'}</h2>*/}
-        <YouTubeEmbed id={'MnkG7b4Yp7Y'}/>
-      </div>
-  )
-}
 
 export function Videos({type}) {
   let vids;
@@ -166,8 +156,14 @@ export function Videos({type}) {
         <Col sm={12} md={6} lg={lg} key={i} className="mb-4">
           <div className="video-container">
             <h2>{video.title}</h2>
-            <div className="">
-              <YouTubeEmbed id={video.id} />
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe
+                  className="embed-responsive-item"
+                  src={video.url}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+              ></iframe>
             </div>
           </div>
         </Col>
