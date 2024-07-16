@@ -6,22 +6,6 @@
     background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .navbar {
     justify-content: center;
     font-size: clamp(10px, 4vw, 30px);
@@ -48,9 +32,11 @@
     object-fit: cover;
 }
 
-
-body {
+body, html {
     background-color: black;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .button-box {
