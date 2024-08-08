@@ -7,7 +7,7 @@ function Roadmap() {
         <s>April: Token Launch</s>,
         <s>May: DEX Listings, CMC Listing, Twitter Partnerships</s>,
         <s>July: Arcade Launch 🃏♦️♣️♥️♠️🎲 </s>,
-        "July: Twitter Storm, Movie Release 🔥🚀",
+        <s>July: Twitter Storm, Movie Release 🔥🚀</s>,
         "Nov: US Election, Deadpool for President!",
     ];
 
