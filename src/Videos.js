@@ -3,6 +3,11 @@ import { Col, Row } from "react-bootstrap";
 
 const trolls = [
   {
+    title: "GOLFING",
+    url: "https://youtube.com/embed/LgDdgxbJSvs",
+    id: "LgDdgxbJSvs"
+  },
+  {
     title: "RACKETS",
     url: "https://youtube.com/embed/leeB1QrRNOo",
     id: "leeB1QrRNOo"
